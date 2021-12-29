@@ -1,8 +1,14 @@
 # programacao1
 Trabalho usado para obter nota para passar na matéria de Programação Imperativa
 
+<h5 align="center">Duvidas que surgiram:</h5>
+- Como vai ser inserida as moedas no programa?
 
-Comecei preparando os cases vamos fazer as funções dps jogamos pra main eu vou deixar comentários e se precisar de lembrar de alguma coisa deixarei no readme os passos que temos que fazer
+Passos
+
+- Fazer a função InsereMoedas
+- Fazer a função GravarMoedas
+- Fazer a função LerMoedas
 
 
 
