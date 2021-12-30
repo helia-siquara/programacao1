@@ -26,7 +26,7 @@ struct TMoeda
 
 	int numRegister;
 	int epoca;
-  float valor;
+  	float valor;
 	int anoCunho;
 	float diametro;
 	float peso;
@@ -34,7 +34,7 @@ struct TMoeda
 	char tipoMetal[30];
 
   struct data_aquisicao aquisicao;
-};cad_moedas[TMAX];
+};cad_moedas[TMAX_REGISTOS];
 	
 //Função que implementa um menu no programa
 
@@ -55,9 +55,9 @@ void exibeMenu(){
 void InsereMoeda(int v[]){
 
   int i;
-  struct TMoeda Moedas[TMAX];
+  struct TMoeda Moedas[TMAX_REGISTOS];
 
-  for(i =0; i<= TMAX; i++){
+  for(i =0; i<= TMAX_REGISTOS; i++){
 
     printf("Numero de Registo:");
     scanf("%d", &Moedas[i].numRegister);
