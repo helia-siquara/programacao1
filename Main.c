@@ -3,9 +3,10 @@
 #include <locale.h>
 #include "coinLibrary.h"
 
+#define TMAX_REGISTOS 30
 
 void main(){
-	TMoeda Moedas[30];
+	TMoeda Moedas[TMAX_REGISTOS];
 	int op=1;
 	setlocale(LC_ALL, "Portuguese");
 
