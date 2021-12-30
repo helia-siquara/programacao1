@@ -6,6 +6,14 @@
 
 #include <stdio.h>
 
+struct data_aquisicao
+{
+  int dia;
+  int mes;
+  int ano;
+
+};
+
 struct TMoeda
 {
 	enum tp_estado {
@@ -14,17 +22,19 @@ struct TMoeda
 	MBC,
 	BELA,
 	SOB
-	};estado;
+	}estado;
+
 	int numRegister;
 	int epoca;
-    int valor;
+  float valor;
 	int anoCunho;
 	float diametro;
 	float peso;
-	int aquisicao;
 	float valorComercial;
 	char tipoMetal[30];
-};
+
+  struct data_aquisicao aquisicao;
+};cad_moedas[TMAX];
 	
 //Função que implementa um menu no programa
 
@@ -68,7 +78,7 @@ void InsereMoeda(int v[]){
     scanf("%f", &Moedas[i].peso);
 
     printf("Data de Aquisição:");
-    scanf("%d", &Moedas[i].aquisicao);
+    scanf("%d/%d/%d", &Moedas[i].aquisicao.dia,&Moedas[i].aquisicao.mes,&Moedas[i].aquisicao.ano);
 
     printf("Valor comercial:");
     scanf("%f", &Moedas[i].valorComercial);
