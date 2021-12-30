@@ -8,13 +8,13 @@
 
 struct TMoeda
 {
-	enum estado {
+	enum tp_estado {
 	MC,
 	BC,
 	MBC,
 	BELA,
 	SOB
-	};
+	};estado;
 	int numRegister;
 	int epoca;
     int valor;
@@ -42,6 +42,41 @@ void exibeMenu(){
 
 //Função que registra uma moeda no programa
 
-void InsereMoeda(){
-	printf("Moeda inserida\n");
+int InsereMoeda(int v[]){
+
+  int i;
+  struct TMoeda Moedas[30];
+
+  for(i =0; i<= TMAX; i++){
+
+    printf("Numero de Registo:");
+    scanf("%d", &Moedas[i].numRegister);
+
+    printf("Época:");
+    scanf("%d", &Moedas[i].epoca);
+
+    printf("Valor:");
+    scanf("%f", &Moedas[i].valor);
+
+    printf("Ano de Cunho:");
+    scanf("%d", &Moedas[i].anoCunho);
+
+    printf("Diâmetro:");
+    scanf("%f", &Moedas[i].diametro);
+
+    printf("Peso:");
+    scanf("%f", &Moedas[i].peso);
+
+    printf("Data de Aquisição:");
+    scanf("%d", &Moedas[i].aquisicao);
+
+    printf("Valor comercial:");
+    scanf("%f", &Moedas[i].valorComercial);
+
+    printf("Metal:");
+    gets(Moedas[i].tipoMetal);
+
+    printf("Estado de Conservação:");
+    gets(&Moedas[i].estado);
+  }
 }
